@@ -43,6 +43,17 @@ public class LoginTest extends TestBase {
 		logger.pass("Verified that the title contains \"Web Orders\"");
 		
 	}
+	@Test
+	public void loginPOMPatternGitPractice() {
+		logger = reporter.createTest("Positive Login Test");
+		
+		LoginPage loginPage = new LoginPage();
+		loginPage.positiveLogin();
+		Assert.assertTrue(driver.getTitle().contains("Web Orders"));
+		
+		logger.pass("Verified that the title contains \"Web Orders\"");
+		
+	}
 	
 	@Test
 	public void loginPOMPatternNegative() {
